@@ -15,6 +15,7 @@
 		BE9F68D9286897B100AF6640 /* GBShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68D8286897B100AF6640 /* GBShopUITests.swift */; };
 		BE9F68DB286897B100AF6640 /* GBShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68DA286897B100AF6640 /* GBShopUITestsLaunchTests.swift */; };
 		BE9F68E92868B1A900AF6640 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68E82868B1A900AF6640 /* NetworkService.swift */; };
+		BE9F68EC2868B6E000AF6640 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68EB2868B6E000AF6640 /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		BE9F68D8286897B100AF6640 /* GBShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITests.swift; sourceTree = "<group>"; };
 		BE9F68DA286897B100AF6640 /* GBShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BE9F68E82868B1A900AF6640 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		BE9F68EB2868B6E000AF6640 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				BE9F68E72868B13A00AF6640 /* NetworkLayer */,
+				BE9F68EA2868B3C200AF6640 /* Model */,
 				BE9F68B7286897AD00AF6640 /* AppDelegate.swift */,
 				BE9F68B9286897AD00AF6640 /* SceneDelegate.swift */,
 				BE9F68C0286897B100AF6640 /* Assets.xcassets */,
@@ -130,6 +133,14 @@
 				BE9F68E82868B1A900AF6640 /* NetworkService.swift */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		BE9F68EA2868B3C200AF6640 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE9F68EB2868B6E000AF6640 /* Device.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +276,7 @@
 				BE9F68B8286897AD00AF6640 /* AppDelegate.swift in Sources */,
 				BE9F68E92868B1A900AF6640 /* NetworkService.swift in Sources */,
 				BE9F68BA286897AD00AF6640 /* SceneDelegate.swift in Sources */,
+				BE9F68EC2868B6E000AF6640 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
