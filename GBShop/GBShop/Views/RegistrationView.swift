@@ -68,7 +68,7 @@ class RegistrationView: UIView {
         button.setTitle("Зарегистрироваться", for: .normal)
         button.backgroundColor = .red
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        button.addTarget(self, action: #selector(registrationButtonAction), for: .touchUpInside)
+        button.addTarget(registrationViewDelegate, action: #selector(registrationButtonAction), for: .touchUpInside)
         return button
     }()
     
