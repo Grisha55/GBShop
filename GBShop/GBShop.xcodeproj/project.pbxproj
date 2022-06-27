@@ -20,6 +20,7 @@
 		BE9F68F22868DFDF00AF6640 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68F12868DFDF00AF6640 /* LoginView.swift */; };
 		BE9F68F728697E6300AF6640 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68F628697E6300AF6640 /* RegistrationView.swift */; };
 		BE9F68F92869E8DE00AF6640 /* DevicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68F82869E8DE00AF6640 /* DevicesVC.swift */; };
+		BE9F68FB286A258700AF6640 /* DevicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68FA286A258700AF6640 /* DevicePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		BE9F68F12868DFDF00AF6640 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BE9F68F628697E6300AF6640 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		BE9F68F82869E8DE00AF6640 /* DevicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesVC.swift; sourceTree = "<group>"; };
+		BE9F68FA286A258700AF6640 /* DevicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 		BE9F68EE2868DFA300AF6640 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				BE9F68FA286A258700AF6640 /* DevicePresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			files = (
 				BE9F68F22868DFDF00AF6640 /* LoginView.swift in Sources */,
 				BE9F68B8286897AD00AF6640 /* AppDelegate.swift in Sources */,
+				BE9F68FB286A258700AF6640 /* DevicePresenter.swift in Sources */,
 				BE9F68E92868B1A900AF6640 /* NetworkService.swift in Sources */,
 				BE9F68F728697E6300AF6640 /* RegistrationView.swift in Sources */,
 				BE9F68BA286897AD00AF6640 /* SceneDelegate.swift in Sources */,

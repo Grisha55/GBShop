@@ -8,6 +8,7 @@
 import Foundation
 
 protocol NetworkServiceProtocol {
+    func logIn(urlString: String, name: String, password: String, result: @escaping (Bool) -> Void)
     func fetchData<T: Decodable>(urlString: String, completion: @escaping (T) -> Void)
 }
 

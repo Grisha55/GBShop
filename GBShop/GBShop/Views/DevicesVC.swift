@@ -9,6 +9,8 @@ import UIKit
 
 class DevicesVC: UIViewController {
 
+    private var devicePresenter = DevicePresenter()
+    
     lazy var tableView: UITableView = {
         let table = UITableView()
         return table
@@ -19,6 +21,8 @@ class DevicesVC: UIViewController {
 
         self.view.backgroundColor = .white
         self.title = "Devices"
+        
+        devicePresenter.getDevicesData()
         
         configureTableView()
     }
