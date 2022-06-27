@@ -27,6 +27,7 @@ class LoginView: UIView {
         let tf = UITextField()
         tf.placeholder = "Введите имя пользователя"
         tf.borderStyle = .bezel
+        tf.autocapitalizationType = .none
         return tf
     }()
     
@@ -34,14 +35,15 @@ class LoginView: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 17.0, weight: .semibold)
         label.textColor = .lightGray
-        label.text = "Enter your password"
+        label.text = "Пароль"
         return label
     }()
     
     lazy var passwordTF: UITextField = {
         let tf = UITextField()
-        tf.placeholder = "Enter your password"
+        tf.placeholder = "Введите пароль"
         tf.borderStyle = .bezel
+        tf.autocapitalizationType = .none
         return tf
     }()
     
