@@ -16,6 +16,8 @@
 		BE9F68DB286897B100AF6640 /* GBShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68DA286897B100AF6640 /* GBShopUITestsLaunchTests.swift */; };
 		BE9F68E92868B1A900AF6640 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68E82868B1A900AF6640 /* NetworkService.swift */; };
 		BE9F68EC2868B6E000AF6640 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68EB2868B6E000AF6640 /* Device.swift */; };
+		BE9F68F02868DFCA00AF6640 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68EF2868DFCA00AF6640 /* LoginVC.swift */; };
+		BE9F68F22868DFDF00AF6640 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68F12868DFDF00AF6640 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		BE9F68DA286897B100AF6640 /* GBShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BE9F68E82868B1A900AF6640 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		BE9F68EB2868B6E000AF6640 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		BE9F68EF2868DFCA00AF6640 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		BE9F68F12868DFDF00AF6640 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				BE9F68E72868B13A00AF6640 /* NetworkLayer */,
-				BE9F68EA2868B3C200AF6640 /* Model */,
+				BE9F68EE2868DFA300AF6640 /* Presenters */,
+				BE9F68ED2868DF8C00AF6640 /* Views */,
+				BE9F68EA2868B3C200AF6640 /* Models */,
 				BE9F68B7286897AD00AF6640 /* AppDelegate.swift */,
 				BE9F68B9286897AD00AF6640 /* SceneDelegate.swift */,
 				BE9F68C0286897B100AF6640 /* Assets.xcassets */,
@@ -135,12 +141,28 @@
 			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
-		BE9F68EA2868B3C200AF6640 /* Model */ = {
+		BE9F68EA2868B3C200AF6640 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				BE9F68EB2868B6E000AF6640 /* Device.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BE9F68ED2868DF8C00AF6640 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE9F68EF2868DFCA00AF6640 /* LoginVC.swift */,
+				BE9F68F12868DFDF00AF6640 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE9F68EE2868DFA300AF6640 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,10 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9F68F22868DFDF00AF6640 /* LoginView.swift in Sources */,
 				BE9F68B8286897AD00AF6640 /* AppDelegate.swift in Sources */,
 				BE9F68E92868B1A900AF6640 /* NetworkService.swift in Sources */,
 				BE9F68BA286897AD00AF6640 /* SceneDelegate.swift in Sources */,
 				BE9F68EC2868B6E000AF6640 /* Device.swift in Sources */,
+				BE9F68F02868DFCA00AF6640 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,7 +474,6 @@
 				INFOPLIST_FILE = GBShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -478,7 +501,6 @@
 				INFOPLIST_FILE = GBShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
