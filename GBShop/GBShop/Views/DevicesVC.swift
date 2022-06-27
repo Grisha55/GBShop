@@ -7,9 +7,13 @@
 
 import UIKit
 
-class DevicesVC: UIViewController {
+protocol DevicesVCProtocol: AnyObject {
+    
+}
 
-    private var devicePresenter = DevicePresenter()
+class DevicesVC: UIViewController, DevicesVCProtocol {
+
+    var devicePresenter: DevicePresenterProtocol!
     
     lazy var tableView: UITableView = {
         let table = UITableView()

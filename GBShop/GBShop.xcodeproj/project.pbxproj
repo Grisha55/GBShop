@@ -21,6 +21,7 @@
 		BE9F68F728697E6300AF6640 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68F628697E6300AF6640 /* RegistrationView.swift */; };
 		BE9F68F92869E8DE00AF6640 /* DevicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68F82869E8DE00AF6640 /* DevicesVC.swift */; };
 		BE9F68FB286A258700AF6640 /* DevicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68FA286A258700AF6640 /* DevicePresenter.swift */; };
+		BE9F68FE286A28D800AF6640 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68FD286A28D800AF6640 /* Assembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		BE9F68F628697E6300AF6640 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		BE9F68F82869E8DE00AF6640 /* DevicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesVC.swift; sourceTree = "<group>"; };
 		BE9F68FA286A258700AF6640 /* DevicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePresenter.swift; sourceTree = "<group>"; };
+		BE9F68FD286A28D800AF6640 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		BE9F68B6286897AD00AF6640 /* GBShop */ = {
 			isa = PBXGroup;
 			children = (
+				BE9F68FC286A28CA00AF6640 /* Assembly */,
 				BE9F68E72868B13A00AF6640 /* NetworkLayer */,
 				BE9F68EE2868DFA300AF6640 /* Presenters */,
 				BE9F68ED2868DF8C00AF6640 /* Views */,
@@ -172,6 +175,14 @@
 				BE9F68FA286A258700AF6640 /* DevicePresenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		BE9F68FC286A28CA00AF6640 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				BE9F68FD286A28D800AF6640 /* Assembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE9F68F22868DFDF00AF6640 /* LoginView.swift in Sources */,
+				BE9F68FE286A28D800AF6640 /* Assembly.swift in Sources */,
 				BE9F68B8286897AD00AF6640 /* AppDelegate.swift in Sources */,
 				BE9F68FB286A258700AF6640 /* DevicePresenter.swift in Sources */,
 				BE9F68E92868B1A900AF6640 /* NetworkService.swift in Sources */,

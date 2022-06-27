@@ -7,14 +7,16 @@
 
 import Foundation
 
-protocol DevicePresenterProtocol {
-    
+protocol DevicePresenterProtocol: AnyObject {
+    func getDevicesData()
 }
 
 class DevicePresenter: DevicePresenterProtocol {
     
-    weak var deviceView = DevicesVC()
-    private var networkService = NetworkService()
+    weak var deviceView: DevicesVCProtocol!
+    
+    var networkService: NetworkServiceProtocol!
+    
     var devices = [Device]()
     
     func getDevicesData() {

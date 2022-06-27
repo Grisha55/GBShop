@@ -9,8 +9,8 @@ import UIKit
 
 class LoginVC: UIViewController {
 
-    private var loginView = LoginView()
-    private var registrationView = RegistrationView()
+    var loginView: LoginView!
+    var registrationView: RegistrationView!
     
     override func loadView() {
         super.loadView()
@@ -53,8 +53,7 @@ class LoginVC: UIViewController {
 extension LoginVC: RegistrationViewDelegate {
     
     func registrationButtonAction() {
-        let devicesVC = DevicesVC()
-        navigationController?.pushViewController(devicesVC, animated: true)
+        navigationController?.pushViewController(Assembly.buildDevicesVC(), animated: true)
     }
     
 }
@@ -62,7 +61,6 @@ extension LoginVC: RegistrationViewDelegate {
 extension LoginVC: LoginViewDelegate {
     
     func logInAction() {
-        let devicesVC = DevicesVC()
-        navigationController?.pushViewController(devicesVC, animated: true)
+        navigationController?.pushViewController(Assembly.buildDevicesVC(), animated: true)
     }
 }
