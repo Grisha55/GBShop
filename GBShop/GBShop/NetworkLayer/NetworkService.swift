@@ -9,7 +9,7 @@ import Foundation
 
 protocol NetworkServiceProtocol: AnyObject {
     func logIn(urlString: String, name: String, password: String, result: @escaping (Bool) -> Void)
-    func fetchData<T: Decodable>(urlString: String, completion: @escaping (T) -> Void)
+    func fetchData<T: Decodable>(urlString: String, queryItems: [URLQueryItem], completion: @escaping (T) -> Void)
 }
 
 class NetworkService: NetworkServiceProtocol {
@@ -38,18 +38,23 @@ class NetworkService: NetworkServiceProtocol {
                 return
             }
             result(true)
-        }
+        }.resume()
         
     }
     
-    func fetchData<T: Decodable>(urlString: String, completion: @escaping (T) -> Void) {
+    func fetchData<T: Decodable>(urlString: String, queryItems: [URLQueryItem], completion: @escaping (T) -> Void) {
         
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)
         
         guard let url = URL(string: urlString) else { return }
         
-        session.dataTask(with: url) { data, response, error in
+        guard var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true) else { return }
+        urlComponents.queryItems = queryItems
+        
+        guard let finishUrl = urlComponents.url else { return }
+        
+        session.dataTask(with: finishUrl) { data, response, error in
             guard let data = data, error == nil else { return }
             
             do {
@@ -58,7 +63,7 @@ class NetworkService: NetworkServiceProtocol {
             } catch {
                 print(error.localizedDescription)
             }
-        }
+        }.resume()
         
     }
 }
