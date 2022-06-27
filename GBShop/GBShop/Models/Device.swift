@@ -7,14 +7,10 @@
 
 import Foundation
 
-struct AllDevices: Decodable {
-    let products: [Device]
-}
-
 struct Device: Decodable {
-    let id: Int
-    let name: String
-    let price: Int
+    let id: Int?
+    let name: String?
+    let price: Int?
     
     enum CondingKeys: String, CodingKey {
         case id = "id_product"

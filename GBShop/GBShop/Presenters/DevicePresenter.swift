@@ -9,6 +9,7 @@ import Foundation
 
 protocol DevicePresenterProtocol: AnyObject {
     func getDevicesData()
+    var devices: [Device] { get }
 }
 
 class DevicePresenter: DevicePresenterProtocol {
@@ -20,9 +21,12 @@ class DevicePresenter: DevicePresenterProtocol {
     var devices = [Device]()
     
     func getDevicesData() {
-        let urlString = "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/имяФайла.json"
-        self.networkService.fetchData(urlString: urlString) { [weak self] (allDevices: AllDevices) in
-            self?.devices = allDevices.products
+        let urlString = "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/catalogData.json"
+        let queryItems = [URLQueryItem(name: "page_number", value: "1"),
+                          URLQueryItem(name: "id_category", value: "1")
+        ]
+        self.networkService.fetchData(urlString: urlString, queryItems: queryItems) { [weak self] (allDevices: [Device]) in
+            self?.devices = allDevices
         }
     }
 }

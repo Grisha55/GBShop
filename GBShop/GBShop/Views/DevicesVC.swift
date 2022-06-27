@@ -31,6 +31,11 @@ class DevicesVC: UIViewController, DevicesVCProtocol {
         configureTableView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(devicePresenter.devices)
+    }
+    
     private func configureTableView() {
         self.view.addSubview(tableView)
         tableView.delegate = self
