@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct AllDevices: Decodable {
+    let products: [Device]
+}
+
 struct Device: Decodable {
     let id: Int
     let name: String
