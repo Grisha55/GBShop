@@ -14,6 +14,14 @@
 		BE9F68CF286897B100AF6640 /* GBShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68CE286897B100AF6640 /* GBShopTests.swift */; };
 		BE9F68D9286897B100AF6640 /* GBShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68D8286897B100AF6640 /* GBShopUITests.swift */; };
 		BE9F68DB286897B100AF6640 /* GBShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68DA286897B100AF6640 /* GBShopUITestsLaunchTests.swift */; };
+		BE9F68E92868B1A900AF6640 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68E82868B1A900AF6640 /* NetworkService.swift */; };
+		BE9F68EC2868B6E000AF6640 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68EB2868B6E000AF6640 /* Device.swift */; };
+		BE9F68F02868DFCA00AF6640 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68EF2868DFCA00AF6640 /* LoginVC.swift */; };
+		BE9F68F22868DFDF00AF6640 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68F12868DFDF00AF6640 /* LoginView.swift */; };
+		BE9F68F728697E6300AF6640 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68F628697E6300AF6640 /* RegistrationView.swift */; };
+		BE9F68F92869E8DE00AF6640 /* DevicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68F82869E8DE00AF6640 /* DevicesVC.swift */; };
+		BE9F68FB286A258700AF6640 /* DevicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68FA286A258700AF6640 /* DevicePresenter.swift */; };
+		BE9F68FE286A28D800AF6640 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68FD286A28D800AF6640 /* Assembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +53,14 @@
 		BE9F68D4286897B100AF6640 /* GBShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9F68D8286897B100AF6640 /* GBShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITests.swift; sourceTree = "<group>"; };
 		BE9F68DA286897B100AF6640 /* GBShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BE9F68E82868B1A900AF6640 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		BE9F68EB2868B6E000AF6640 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		BE9F68EF2868DFCA00AF6640 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		BE9F68F12868DFDF00AF6640 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BE9F68F628697E6300AF6640 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		BE9F68F82869E8DE00AF6640 /* DevicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesVC.swift; sourceTree = "<group>"; };
+		BE9F68FA286A258700AF6640 /* DevicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePresenter.swift; sourceTree = "<group>"; };
+		BE9F68FD286A28D800AF6640 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +111,11 @@
 		BE9F68B6286897AD00AF6640 /* GBShop */ = {
 			isa = PBXGroup;
 			children = (
+				BE9F68FC286A28CA00AF6640 /* Assembly */,
+				BE9F68E72868B13A00AF6640 /* NetworkLayer */,
+				BE9F68EE2868DFA300AF6640 /* Presenters */,
+				BE9F68ED2868DF8C00AF6640 /* Views */,
+				BE9F68EA2868B3C200AF6640 /* Models */,
 				BE9F68B7286897AD00AF6640 /* AppDelegate.swift */,
 				BE9F68B9286897AD00AF6640 /* SceneDelegate.swift */,
 				BE9F68C0286897B100AF6640 /* Assets.xcassets */,
@@ -119,6 +140,49 @@
 				BE9F68DA286897B100AF6640 /* GBShopUITestsLaunchTests.swift */,
 			);
 			path = GBShopUITests;
+			sourceTree = "<group>";
+		};
+		BE9F68E72868B13A00AF6640 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				BE9F68E82868B1A900AF6640 /* NetworkService.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		BE9F68EA2868B3C200AF6640 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE9F68EB2868B6E000AF6640 /* Device.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BE9F68ED2868DF8C00AF6640 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE9F68EF2868DFCA00AF6640 /* LoginVC.swift */,
+				BE9F68F12868DFDF00AF6640 /* LoginView.swift */,
+				BE9F68F628697E6300AF6640 /* RegistrationView.swift */,
+				BE9F68F82869E8DE00AF6640 /* DevicesVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE9F68EE2868DFA300AF6640 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				BE9F68FA286A258700AF6640 /* DevicePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		BE9F68FC286A28CA00AF6640 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				BE9F68FD286A28D800AF6640 /* Assembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +315,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9F68F22868DFDF00AF6640 /* LoginView.swift in Sources */,
+				BE9F68FE286A28D800AF6640 /* Assembly.swift in Sources */,
 				BE9F68B8286897AD00AF6640 /* AppDelegate.swift in Sources */,
+				BE9F68FB286A258700AF6640 /* DevicePresenter.swift in Sources */,
+				BE9F68E92868B1A900AF6640 /* NetworkService.swift in Sources */,
+				BE9F68F728697E6300AF6640 /* RegistrationView.swift in Sources */,
 				BE9F68BA286897AD00AF6640 /* SceneDelegate.swift in Sources */,
+				BE9F68EC2868B6E000AF6640 /* Device.swift in Sources */,
+				BE9F68F92869E8DE00AF6640 /* DevicesVC.swift in Sources */,
+				BE9F68F02868DFCA00AF6640 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +498,6 @@
 				INFOPLIST_FILE = GBShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -454,7 +525,6 @@
 				INFOPLIST_FILE = GBShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
