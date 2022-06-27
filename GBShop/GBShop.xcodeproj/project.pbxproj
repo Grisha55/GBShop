@@ -18,6 +18,7 @@
 		BE9F68EC2868B6E000AF6640 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68EB2868B6E000AF6640 /* Device.swift */; };
 		BE9F68F02868DFCA00AF6640 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68EF2868DFCA00AF6640 /* LoginVC.swift */; };
 		BE9F68F22868DFDF00AF6640 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68F12868DFDF00AF6640 /* LoginView.swift */; };
+		BE9F68F728697E6300AF6640 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68F628697E6300AF6640 /* RegistrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		BE9F68EB2868B6E000AF6640 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		BE9F68EF2868DFCA00AF6640 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		BE9F68F12868DFDF00AF6640 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BE9F68F628697E6300AF6640 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				BE9F68EF2868DFCA00AF6640 /* LoginVC.swift */,
 				BE9F68F12868DFDF00AF6640 /* LoginView.swift */,
+				BE9F68F628697E6300AF6640 /* RegistrationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				BE9F68F22868DFDF00AF6640 /* LoginView.swift in Sources */,
 				BE9F68B8286897AD00AF6640 /* AppDelegate.swift in Sources */,
 				BE9F68E92868B1A900AF6640 /* NetworkService.swift in Sources */,
+				BE9F68F728697E6300AF6640 /* RegistrationView.swift in Sources */,
 				BE9F68BA286897AD00AF6640 /* SceneDelegate.swift in Sources */,
 				BE9F68EC2868B6E000AF6640 /* Device.swift in Sources */,
 				BE9F68F02868DFCA00AF6640 /* LoginVC.swift in Sources */,

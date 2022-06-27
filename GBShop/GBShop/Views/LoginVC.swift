@@ -10,16 +10,19 @@ import UIKit
 class LoginVC: UIViewController {
 
     private var loginView = LoginView()
+    private var registrationView = RegistrationView()
     
     override func loadView() {
         super.loadView()
-        self.view = loginView
+        self.view = RegistrationView()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         loginView.loginViewDelegate = self
+        registrationView.registrationViewDelegate = self
+        
         setupNavBar()
     }
     
@@ -34,9 +37,25 @@ class LoginVC: UIViewController {
     
     @objc
     func registerButtonAction() {
-        // Тут будет меняться вьюха на регистрационную
-        print("Registration")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Войти", style: .plain, target: self, action: #selector(logInButtonAction))
+        self.view = registrationView
+        self.title = "Регистрация"
     }
+    
+    @objc
+    func logInButtonAction() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Регистрация", style: .plain, target: self, action: #selector(registerButtonAction))
+        self.view = loginView
+        self.title = "Вход"
+    }
+}
+
+extension LoginVC: RegistrationViewDelegate {
+    
+    func registrationButtonAction() {
+        print("It's working")
+    }
+    
 }
 
 extension LoginVC: LoginViewDelegate {
