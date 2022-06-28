@@ -22,18 +22,19 @@ class DevicesVC: UIViewController, DevicesVCProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.view.backgroundColor = .white
         self.title = "Devices"
-        
-        devicePresenter.getDevicesData()
         
         configureTableView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(devicePresenter.devices)
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
     
     private func configureTableView() {
@@ -41,6 +42,8 @@ class DevicesVC: UIViewController, DevicesVCProtocol {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = self.view.frame
+        tableView.register(DevicesCell.self, forCellReuseIdentifier: DevicesCell.identifier)
+        self.devicePresenter.getDevicesData()
     }
     
 }
@@ -48,10 +51,19 @@ class DevicesVC: UIViewController, DevicesVCProtocol {
 extension DevicesVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return devicePresenter.devices.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: DevicesCell.identifier, for: indexPath) as? DevicesCell else { return UITableViewCell() }
+        cell.device = devicePresenter.devices[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let device = devicePresenter.devices[indexPath.row]
+        let infoVC = Assembly.buildInfoVC(device: device)
+        self.navigationController?.pushViewController(infoVC, animated: true)
     }
 }
