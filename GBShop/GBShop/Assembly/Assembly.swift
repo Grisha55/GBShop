@@ -9,6 +9,12 @@ import UIKit
 
 class Assembly {
     
+    class func buildInfoVC(device: Device) -> UIViewController {
+        let view = InfoVC(device: device)
+        
+        return view
+    }
+    
     class func buildDevicesVC() -> UIViewController {
         let view = DevicesVC()
         let presenter = DevicePresenter()

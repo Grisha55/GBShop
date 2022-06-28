@@ -27,8 +27,10 @@ class DevicesVC: UIViewController, DevicesVCProtocol {
         self.title = "Devices"
         
         configureTableView()
-        
-        self.devicePresenter.getDevicesData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
@@ -41,6 +43,7 @@ class DevicesVC: UIViewController, DevicesVCProtocol {
         tableView.dataSource = self
         tableView.frame = self.view.frame
         tableView.register(DevicesCell.self, forCellReuseIdentifier: DevicesCell.identifier)
+        self.devicePresenter.getDevicesData()
     }
     
 }
@@ -55,5 +58,12 @@ extension DevicesVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DevicesCell.identifier, for: indexPath) as? DevicesCell else { return UITableViewCell() }
         cell.device = devicePresenter.devices[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let device = devicePresenter.devices[indexPath.row]
+        let infoVC = Assembly.buildInfoVC(device: device)
+        self.navigationController?.pushViewController(infoVC, animated: true)
     }
 }
