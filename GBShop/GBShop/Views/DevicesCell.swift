@@ -11,6 +11,18 @@ class DevicesCell: UITableViewCell {
     
     static let identifier = "DevicesCell"
     
+    var device: Device? {
+        didSet {
+            guard let device = device else {
+                return
+            }
+            self.nameLabel.text = device.name ?? "MacBook"
+            self.idLabel.text = "\(String(describing: device.id ?? 123))"
+            self.priceLabel.text = "\(String(describing: device.price ?? 100))"
+            self.photoImageView.image = UIImage(named: "macbook")
+        }
+    }
+    
     lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.textColor = .black
@@ -77,9 +89,9 @@ class DevicesCell: UITableViewCell {
     
     private func setPhotoImageViewConstraints() {
         photoImageView.translatesAutoresizingMaskIntoConstraints                                      = false
-        photoImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 5).isActive            = true
-        photoImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5).isActive     = true
+        photoImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive                 = true
         photoImageView.widthAnchor.constraint(equalToConstant: self.frame.width / 3).isActive         = true
+        photoImageView.heightAnchor.constraint(equalToConstant: self.frame.height).isActive           = true
         photoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5).isActive = true
     }
     
