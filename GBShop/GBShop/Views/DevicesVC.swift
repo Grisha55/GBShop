@@ -41,6 +41,7 @@ class DevicesVC: UIViewController, DevicesVCProtocol {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = self.view.frame
+        tableView.register(DevicesCell.self, forCellReuseIdentifier: DevicesCell.identifier)
     }
     
 }
@@ -52,6 +53,8 @@ extension DevicesVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: DevicesCell.identifier, for: indexPath) as? DevicesCell else { return UITableViewCell() }
+        
+        return cell
     }
 }
