@@ -23,6 +23,7 @@
 		BE9F68FB286A258700AF6640 /* DevicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68FA286A258700AF6640 /* DevicePresenter.swift */; };
 		BE9F68FE286A28D800AF6640 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68FD286A28D800AF6640 /* Assembly.swift */; };
 		BE9F6900286AD86800AF6640 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68FF286AD86800AF6640 /* LoginPresenter.swift */; };
+		BE9F6902286AD9B900AF6640 /* DevicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F6901286AD9B900AF6640 /* DevicesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		BE9F68FA286A258700AF6640 /* DevicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePresenter.swift; sourceTree = "<group>"; };
 		BE9F68FD286A28D800AF6640 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		BE9F68FF286AD86800AF6640 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		BE9F6901286AD9B900AF6640 /* DevicesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				BE9F68F12868DFDF00AF6640 /* LoginView.swift */,
 				BE9F68F628697E6300AF6640 /* RegistrationView.swift */,
 				BE9F68F82869E8DE00AF6640 /* DevicesVC.swift */,
+				BE9F6901286AD9B900AF6640 /* DevicesCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				BE9F6900286AD86800AF6640 /* LoginPresenter.swift in Sources */,
 				BE9F68E92868B1A900AF6640 /* NetworkService.swift in Sources */,
 				BE9F68F728697E6300AF6640 /* RegistrationView.swift in Sources */,
+				BE9F6902286AD9B900AF6640 /* DevicesCell.swift in Sources */,
 				BE9F68BA286897AD00AF6640 /* SceneDelegate.swift in Sources */,
 				BE9F68EC2868B6E000AF6640 /* Device.swift in Sources */,
 				BE9F68F92869E8DE00AF6640 /* DevicesVC.swift in Sources */,
