@@ -22,6 +22,7 @@
 		BE9F68F92869E8DE00AF6640 /* DevicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68F82869E8DE00AF6640 /* DevicesVC.swift */; };
 		BE9F68FB286A258700AF6640 /* DevicePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68FA286A258700AF6640 /* DevicePresenter.swift */; };
 		BE9F68FE286A28D800AF6640 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68FD286A28D800AF6640 /* Assembly.swift */; };
+		BE9F6900286AD86800AF6640 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68FF286AD86800AF6640 /* LoginPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		BE9F68F82869E8DE00AF6640 /* DevicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesVC.swift; sourceTree = "<group>"; };
 		BE9F68FA286A258700AF6640 /* DevicePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicePresenter.swift; sourceTree = "<group>"; };
 		BE9F68FD286A28D800AF6640 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		BE9F68FF286AD86800AF6640 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				BE9F68FA286A258700AF6640 /* DevicePresenter.swift */,
+				BE9F68FF286AD86800AF6640 /* LoginPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				BE9F68FE286A28D800AF6640 /* Assembly.swift in Sources */,
 				BE9F68B8286897AD00AF6640 /* AppDelegate.swift in Sources */,
 				BE9F68FB286A258700AF6640 /* DevicePresenter.swift in Sources */,
+				BE9F6900286AD86800AF6640 /* LoginPresenter.swift in Sources */,
 				BE9F68E92868B1A900AF6640 /* NetworkService.swift in Sources */,
 				BE9F68F728697E6300AF6640 /* RegistrationView.swift in Sources */,
 				BE9F68BA286897AD00AF6640 /* SceneDelegate.swift in Sources */,
