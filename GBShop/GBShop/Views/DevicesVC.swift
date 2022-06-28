@@ -22,18 +22,17 @@ class DevicesVC: UIViewController, DevicesVCProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.view.backgroundColor = .white
         self.title = "Devices"
         
-        devicePresenter.getDevicesData()
-        
         configureTableView()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print(devicePresenter.devices)
+        
+        self.devicePresenter.getDevicesData()
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
     
     private func configureTableView() {
@@ -49,12 +48,12 @@ class DevicesVC: UIViewController, DevicesVCProtocol {
 extension DevicesVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return devicePresenter.devices.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DevicesCell.identifier, for: indexPath) as? DevicesCell else { return UITableViewCell() }
-        
+        cell.device = devicePresenter.devices[indexPath.row]
         return cell
     }
 }
