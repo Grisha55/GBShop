@@ -14,10 +14,10 @@ protocol InfoVCInput: AnyObject {
 class InfoVC: UIViewController, InfoVCInput {
 
     var device: Device
+    var infoView: InfoView!
     
     override func loadView() {
         super.loadView()
-        let infoView = InfoView()
         self.view = infoView
     }
     
