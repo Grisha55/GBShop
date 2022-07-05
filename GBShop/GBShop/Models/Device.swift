@@ -18,3 +18,15 @@ struct Device: Decodable {
         case price
     }
 }
+
+extension Device: Equatable {
+    static func == (lhs: Device, rhs: Device) -> Bool {
+        if
+            lhs.id == rhs.id,
+            lhs.name == rhs.name,
+            lhs.price == rhs.price {
+            return true
+        }
+        return false
+    }
+}

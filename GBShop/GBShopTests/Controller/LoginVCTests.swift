@@ -18,6 +18,8 @@ class LoginVCTests: XCTestCase {
         
         sut = LoginVC()
         devicesVC = DevicesVC()
+        devicesVC.devicePresenter = DevicePresenter()
+        devicesVC.devicePresenter
         sut.loginView = LoginView()
         sut.registrationView = RegistrationView()
         sut.loadViewIfNeeded()
