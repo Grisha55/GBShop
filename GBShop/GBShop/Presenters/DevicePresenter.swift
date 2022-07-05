@@ -9,7 +9,8 @@ import Foundation
 
 protocol DevicePresenterProtocol: AnyObject {
     func getDevicesData()
-    var devices: [Device] { get }
+    var devices: [Device] { get set }
+    var networkService: NetworkServiceProtocol! { get set }
 }
 
 class DevicePresenter: DevicePresenterProtocol {

@@ -12,6 +12,10 @@ protocol NetworkServiceProtocol: AnyObject {
     func fetchData<T: Decodable>(urlString: String, queryItems: [URLQueryItem], completion: @escaping (T) -> Void)
 }
 
+protocol URLSessionProtocol {
+    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
+}
+
 class NetworkService: NetworkServiceProtocol {
     
     func logIn(urlString: String, name: String, password: String, result: @escaping (Bool) -> Void) {
