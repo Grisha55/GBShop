@@ -69,7 +69,7 @@ class DevicesVCTests: XCTestCase {
     func testCellForRowCallsConfigure() {
         let mockTableView = MockTableView.mockTableView(withDataSource: sut)
         
-        let device = Device(id: 1, name: nil, price: nil)
+        let device = Device(id: 1, name: nil, price: 45600)
         let device2 = Device(id: 2, name: nil, price: nil)
         sut.devicePresenter.devices.append(device)
         sut.devicePresenter.devices.append(device2)

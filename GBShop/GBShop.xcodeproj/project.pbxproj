@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BE773CB628745BD500D28A1D /* DevicesVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE773CB528745BD500D28A1D /* DevicesVCTests.swift */; };
 		BE773CB92874787000D28A1D /* DevicesCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE773CB82874787000D28A1D /* DevicesCellTests.swift */; };
+		BE773CBB287484DB00D28A1D /* InfoVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE773CBA287484DB00D28A1D /* InfoVCTests.swift */; };
 		BE9F68B8286897AD00AF6640 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68B7286897AD00AF6640 /* AppDelegate.swift */; };
 		BE9F68BA286897AD00AF6640 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9F68B9286897AD00AF6640 /* SceneDelegate.swift */; };
 		BE9F68C1286897B100AF6640 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9F68C0286897B100AF6640 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		BE773CB528745BD500D28A1D /* DevicesVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesVCTests.swift; sourceTree = "<group>"; };
 		BE773CB82874787000D28A1D /* DevicesCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesCellTests.swift; sourceTree = "<group>"; };
+		BE773CBA287484DB00D28A1D /* InfoVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVCTests.swift; sourceTree = "<group>"; };
 		BE9F68B4286897AD00AF6640 /* GBShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9F68B7286897AD00AF6640 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE9F68B9286897AD00AF6640 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			children = (
 				BEA038052874367900B9CF11 /* LoginVCTests.swift */,
 				BE773CB528745BD500D28A1D /* DevicesVCTests.swift */,
+				BE773CBA287484DB00D28A1D /* InfoVCTests.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 			files = (
 				BEA038032874209400B9CF11 /* NetworkServiceTests.swift in Sources */,
 				BE773CB92874787000D28A1D /* DevicesCellTests.swift in Sources */,
+				BE773CBB287484DB00D28A1D /* InfoVCTests.swift in Sources */,
 				BEA038062874367900B9CF11 /* LoginVCTests.swift in Sources */,
 				BE773CB628745BD500D28A1D /* DevicesVCTests.swift in Sources */,
 				BE9F68CF286897B100AF6640 /* GBShopTests.swift in Sources */,

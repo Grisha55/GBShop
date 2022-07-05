@@ -11,6 +11,8 @@ class Assembly {
     
     class func buildInfoVC(device: Device) -> UIViewController {
         let view = InfoVC(device: device)
+        let infoView = InfoView()
+        view.infoView = infoView
         
         return view
     }
